@@ -10,6 +10,7 @@ node basenode {
 	include default_packages
 	# sudo - needs to be shipped with modified /etc/sudoers file
 	include sudo
+	include screen
 
 	# Useful client side puppet scripts
 	upload_scripts { common_scripts: }		

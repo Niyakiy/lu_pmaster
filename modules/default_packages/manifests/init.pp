@@ -1,25 +1,7 @@
 class default_packages {
-        package { mc:
-                ensure => present,
-        }
-
-	package { git:
-                ensure => present,
-        }
-
-	package { vim:
-                ensure => present,
-        }
-
-	package { htop:
-                ensure => present,
-        }
-
-	package { fail2ban:
-                ensure => present,
-        }
-
-	package { screen:
+	$packages = [ 'mc', 'git', 'vim', 'joe', 'htop', 'fail2ban', ]
+        
+	package { $packages:
                 ensure => present,
         }
 
