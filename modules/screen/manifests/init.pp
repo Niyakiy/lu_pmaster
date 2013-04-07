@@ -1,6 +1,6 @@
-class sudo { 
+class screen { 
 
-	$package_name = 'sudo'
+	$package_name = 'screen'
 	
 	package { $package_name: 
 		ensure => present, 
