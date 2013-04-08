@@ -1,0 +1,25 @@
+{
+  "license": "Apache 2.0",
+  "dependencies": [
+
+  ],
+  "project_page": "https://github.com/thias/puppet-memcached",
+  "source": "git://github.com/thias/puppet-memcached",
+  "version": "0.0.1",
+  "checksums": {
+    "ChangeLog": "a2298f0072f62eb582df4cc3f085c844",
+    "templates/sysconfig.erb": "1991447f38474814cfc16db26f115a22",
+    "tests/init.pp": "e798f4999ba392f3c0fce0d5290c263f",
+    "manifests/init.pp": "f878bd473eb202043193677df8a89bd4",
+    "LICENSE": "6eb74cb06de37b55366fe13fe01a8476",
+    "Modulefile": "7bf7f121a278dcf8f4f97cf46a0ed3bf",
+    "README.md": "e3398784255076a6311717b09fcda752"
+  },
+  "description": "Install, enable and configure memcached.",
+  "summary": "Memcached module",
+  "types": [
+
+  ],
+  "author": "Matthias Saou",
+  "name": "thias-memcached"
+}
