@@ -9,6 +9,7 @@
 # Sample Usage :
 #  include memcached
 #
+
 class memcached (
   $port      = '11211',
   $user      = 'memcached',
@@ -27,8 +28,21 @@ class memcached (
   }
 
   # Configuration
-  file { '/etc/sysconfig/memcached':
-    content => template('memcached/sysconfig.erb'),
+
+	case $operatingsystem {
+      		centos, redhat: { 
+			$mc_config_file = "/etc/sysconfig/memcached"
+			$mc_config_template = "memcached/sysconfig.erb"
+		}
+      		debian, ubuntu: { 
+			$mc_config_file = "/etc/memcached.conf" 
+			$mc_config_template = "memcached/memcached.conf.erb"
+		}
+      		default: { fail("Unrecognized operating system for memcached") }
+    	}
+
+  file { $mc_config_file:
+    content => template($mc_config_template),
     notify  => Service['memcached'],
     require => Package['memcached'],
   }
