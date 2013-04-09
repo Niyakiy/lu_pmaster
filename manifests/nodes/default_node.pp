@@ -4,8 +4,7 @@ import '../defines/local_user.pp'
 
 node default_node {
 
-	# 1. Adding apt repositories for our packages. UA - deafult (need new param to define for other coutry)
-	# WARNING! POINT OF DISCUSSION!
+	# WARNING! POINT OF DISCUSSION! REPOSITORIES!!!
 	include apt
 
 	# Puppet repo 
