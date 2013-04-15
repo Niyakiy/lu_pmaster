@@ -1,0 +1,14 @@
+Server host names conventions:
+Parts:
+- Project name this server belongs to (PRJ)
+- Server purpose mark (DB[0...]/WEB[0...]/BKP[0...]/LB[1...]/APP[0...] etc)
+- Location country mark (RU|UA|US etc)
+- Data center mark (DC[0...])
+- General purpose server with customizations mark (CST[0...])
+
+Hostname pattern:
+<Project name>-<Location mark>-<Data center mark>-<Server purpose mark>-<Customizations mark>.domain.com
+
+Examples:
+xproj-us-dc1-web1.domain.com
+xproj-us-dc1-db1-cst0.domain.com
